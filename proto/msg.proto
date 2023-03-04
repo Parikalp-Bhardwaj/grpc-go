@@ -1,0 +1,22 @@
+syntax="proto3";
+
+package math;
+
+option go_package ="./proto";
+
+service MathService{
+    rpc Add(TwoNumRequest) returns (TwoNumResponse);
+    rpc Sub(TwoNumRequest) returns (TwoNumResponse);
+    rpc Mul(TwoNumRequest) returns (TwoNumResponse);
+    rpc Div(TwoNumRequest) returns (TwoNumResponse);
+    
+}
+
+message TwoNumRequest{
+    float a = 1;
+    float b = 2;
+}
+
+message TwoNumResponse{
+    float c = 3;
+}
